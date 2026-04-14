@@ -5,18 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#070b14">
-  <title>Star Wars Tarihce</title>
+  <title>Star Wars Tarihçe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="language-switcher">
+    <label class="sr-only" for="languageSelect">Dil seçimi</label>
+    <select id="languageSelect" class="language-select" aria-label="Dil seçimi">
+      <option value="tr">Türkçe</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
   <button
     id="menuToggle"
     class="menu-toggle"
     type="button"
-    aria-label="Menuyu ac"
+    aria-label="Menüyü aç"
     aria-expanded="false"
     aria-controls="siteMenu"
   >
@@ -27,10 +35,10 @@
 
   <aside id="siteMenu" class="site-menu hidden" aria-hidden="true">
     <div id="menuBackdrop" class="site-menu-backdrop" data-nav-close></div>
-    <nav class="site-menu-panel" aria-label="Site menusu">
-      <p class="site-menu-eyebrow">Navigation</p>
-      <a class="site-menu-link" href="index.html" data-nav-close>Anasayfa</a>
-      <a class="site-menu-link" href="history.html" data-nav-close>Tarihce</a>
+    <nav class="site-menu-panel" aria-label="Site menüsü">
+      <p class="site-menu-eyebrow" data-i18n="menu.navigation">Navigation</p>
+      <a class="site-menu-link" href="index.html" data-nav-close data-i18n="menu.home">Anasayfa</a>
+      <a class="site-menu-link" href="history.html" data-nav-close data-i18n="menu.history">Tarihçe</a>
     </nav>
   </aside>
 
@@ -42,9 +50,9 @@
   <main class="page-shell page-shell-history">
     <section class="history-hero">
       <p class="eyebrow">Galactic Timeline</p>
-      <h1>Star Wars Tarihce</h1>
-      <p class="hero-copy">
-        Bu sayfa Eski Cumhuriyet'ten Yeni Cumhuriyet'e kadar galaksinin buyuk donemlerini siralar. Her bolum o cagin siyasal dengesini, Jedi-Sith catismasini ve galaksinin nasil degistigini ozetler.
+      <h1 data-i18n="history.hero.title">Star Wars Tarihçe</h1>
+      <p class="hero-copy" data-i18n="history.hero.copy">
+        Bu sayfa Eski Cumhuriyet'ten Yeni Cumhuriyet'e kadar galaksinin büyük dönemlerini sıralar. Her bölüm o çağın siyasal dengesini, Jedi-Sith çatışmasını ve galaksinin nasıl değiştiğini özetler.
       </p>
     </section>
 
@@ -53,19 +61,19 @@
         <div class="timeline-media">
           <img
             src="media/old-republic-map.png"
-            alt="Eski Cumhuriyet galaksi haritasi"
+            alt="Eski Cumhuriyet galaksi haritası"
             loading="lazy"
             decoding="async"
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">1. Donem</p>
-          <h2>Eski Cumhuriyet</h2>
-          <p>
-            Binlerce yil once Galaktik Cumhuriyet ve Jedi Tarikati galaksinin temel duzenini kurmustu. Bu cagda Sith imparatorluklari ve Jedi arasindaki savaslar, galaksinin siyasi haritasini sekillendirdi.
+          <p class="timeline-kicker" data-i18n="history.era1.kicker">1. Dönem</p>
+          <h2 data-i18n="history.era1.title">Eski Cumhuriyet</h2>
+          <p data-i18n="history.era1.p1">
+            Binlerce yıl önce Galaktik Cumhuriyet ve Jedi Tarikatı galaksinin temel düzenini kurmuştu. Bu çağda Sith imparatorlukları ve Jedi arasındaki savaşlar, galaksinin siyasi haritasını şekillendirdi.
           </p>
-          <p>
-            Coruscant, Dromund Kaas ve Outer Rim cepheleri gibi alanlarda guc dengesi surekli degisiyordu. Cumhuriyet ideal olarak birlesik bir gelecek sunsa da, Sith etkisi galaksinin her krizinde yeniden ortaya cikti.
+          <p data-i18n="history.era1.p2">
+            Coruscant, Dromund Kaas ve Outer Rim cepheleri gibi alanlarda güç dengesi sürekli değişiyordu. Cumhuriyet ideal olarak birleşik bir gelecek sunsa da, Sith etkisi galaksinin her krizinde yeniden ortaya çıktı.
           </p>
         </div>
       </article>
@@ -74,19 +82,19 @@
         <div class="timeline-media">
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/thr-what-is-featured-article_3977be22.jpeg?region=0%2C0%2C1280%2C720"
-            alt="The High Republic cizimi"
+            alt="The High Republic çizimi"
             loading="lazy"
             decoding="async"
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">2. Donem</p>
-          <h2>Yuksek Cumhuriyet</h2>
-          <p>
-            Bu donem Cumhuriyet'in en parlak ve en guclu cagi olarak gorulur. Jedi'lar galakside barisin sembolu haline gelirken Cumhuriyet Outer Rim'e kadar yayilmayi hedefledi.
+          <p class="timeline-kicker" data-i18n="history.era2.kicker">2. Dönem</p>
+          <h2 data-i18n="history.era2.title">Yüksek Cumhuriyet</h2>
+          <p data-i18n="history.era2.p1">
+            Bu dönem Cumhuriyet'in en parlak ve en güçlü çağı olarak görülür. Jedi'lar galakside barışın sembolü haline gelirken Cumhuriyet Outer Rim'e kadar yayılmayı hedefledi.
           </p>
-          <p>
-            Ancak Nihil gibi tehditler, bu altin cagin kirilganligini ortaya cikardi. Jedi'lar sadece savasci degil, kaosu engellemeye calisan koruyucular olarak da sinandi.
+          <p data-i18n="history.era2.p2">
+            Ancak Nihil gibi tehditler, bu altın çağın kırılganlığını ortaya çıkardı. Jedi'lar sadece savaşçı değil, kaosu engellemeye çalışan koruyucular olarak da sınandı.
           </p>
         </div>
       </article>
@@ -101,13 +109,13 @@
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">3. Donem</p>
-          <h2>Son Cumhuriyet Yillari</h2>
-          <p>
-            Naboo Krizi ile birlikte Cumhuriyet'in kurumsal zayifliklari daha gorunur hale geldi. Senato agir isleyen bir yapıya donustu ve buyuk sirketler ile siyasi bloklar gucu kendi cikarlari icin kullanmaya basladi.
+          <p class="timeline-kicker" data-i18n="history.era3.kicker">3. Dönem</p>
+          <h2 data-i18n="history.era3.title">Son Cumhuriyet Yılları</h2>
+          <p data-i18n="history.era3.p1">
+            Naboo Krizi ile birlikte Cumhuriyet'in kurumsal zayıflıkları daha görünür hale geldi. Senato ağır işleyen bir yapıya dönüştü ve büyük şirketler ile siyasi bloklar gücü kendi çıkarları için kullanmaya başladı.
           </p>
-          <p>
-            Bu yillarda Sith geri dondu, ancak bunu cogunluk uzun sure fark etmedi. Qui-Gon Jinn, Obi-Wan Kenobi ve genc Anakin Skywalker gibi isimler galaksinin kaderini belirleyecek olaylarin merkezine yerlesmeye basladi.
+          <p data-i18n="history.era3.p2">
+            Bu yıllarda Sith geri döndü, ancak bunu çoğunluk uzun süre fark etmedi. Qui-Gon Jinn, Obi-Wan Kenobi ve genç Anakin Skywalker gibi isimler galaksinin kaderini belirleyecek olayların merkezine yerleşmeye başladı.
           </p>
         </div>
       </article>
@@ -116,19 +124,19 @@
         <div class="timeline-media">
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/the-clone-wars-movie-lp-sw2-hero-desktop_b17bc0fc.jpeg?region=0%2C0%2C2048%2C878"
-            alt="The Clone Wars afisi"
+            alt="The Clone Wars afişi"
             loading="lazy"
             decoding="async"
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">4. Donem</p>
-          <h2>Klon Savaslari ve Cumhuriyetin Cokusu</h2>
-          <p>
-            Separatist hareket ile Cumhuriyet arasindaki savas, galaksiyi ikiye boldu. Klon ordulari Cumhuriyet'in askeri gucu olurken Jedi'lar da once diplomat, sonra general rolune itildi.
+          <p class="timeline-kicker" data-i18n="history.era4.kicker">4. Dönem</p>
+          <h2 data-i18n="history.era4.title">Klon Savaşları ve Cumhuriyetin Çöküşü</h2>
+          <p data-i18n="history.era4.p1">
+            Separatist hareket ile Cumhuriyet arasındaki savaş, galaksiyi ikiye böldü. Klon orduları Cumhuriyet'in askeri gücü olurken Jedi'lar da önce diplomat, sonra general rolüne itildi.
           </p>
-          <p>
-            Bu savas aslinda Darth Sidious'un kurdugu buyuk planin parcasi idi. Order 66 ile Jedi Tarikati ezildi ve Cumhuriyet, Galaktik Imparatorluk'a donusturuldu.
+          <p data-i18n="history.era4.p2">
+            Bu savaş aslında Darth Sidious'un kurduğu büyük planın parçasıydı. Order 66 ile Jedi Tarikatı ezildi ve Cumhuriyet, Galaktik İmparatorluk'a dönüştürüldü.
           </p>
         </div>
       </article>
@@ -137,19 +145,19 @@
         <div class="timeline-media">
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/Galactic-Empire_ee15e2e7.jpeg?region=0%2C0%2C1200%2C675&width=320"
-            alt="Galaktik Imparatorluk sahnesi"
+            alt="Galaktik İmparatorluk sahnesi"
             loading="lazy"
             decoding="async"
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">5. Donem</p>
-          <h2>Imparatorluk ve Isyan Cagi</h2>
-          <p>
-            Palpatine'in Imparatorlugu merkezilesmis, korku ureten ve askeri guce dayanan bir rejim kurdu. Tarkin Doktrini, Death Star gibi projeler ve bolgesel baski, sistemleri itaat altinda tutmak icin kullanildi.
+          <p class="timeline-kicker" data-i18n="history.era5.kicker">5. Dönem</p>
+          <h2 data-i18n="history.era5.title">İmparatorluk ve İsyan Çağı</h2>
+          <p data-i18n="history.era5.p1">
+            Palpatine'in İmparatorluğu merkezileşmiş, korku üreten ve askeri güce dayanan bir rejim kurdu. Tarkin Doktrini, Death Star gibi projeler ve bölgesel baskı, sistemleri itaat altında tutmak için kullanıldı.
           </p>
-          <p>
-            Buna karsi senatorden kacis yapanlar, eski Cumhuriyet subaylari ve ozgurluk savascilari Rebel Alliance'i kurdu. Luke Skywalker'in ortaya cikisi ve Endor zaferi, Imparatorlugun gerilemesini baslatti.
+          <p data-i18n="history.era5.p2">
+            Buna karşı senatörden kaçış yapanlar, eski Cumhuriyet subayları ve özgürlük savaşçıları Rebel Alliance'ı kurdu. Luke Skywalker'ın ortaya çıkışı ve Endor zaferi, İmparatorluğun gerilemesini başlattı.
           </p>
         </div>
       </article>
@@ -158,19 +166,19 @@
         <div class="timeline-media">
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/new-republic-main_3b7edf4c.jpeg?region=164%2C0%2C953%2C536&width=1200"
-            alt="Yeni Cumhuriyet gorseli"
+            alt="Yeni Cumhuriyet görseli"
             loading="lazy"
             decoding="async"
           >
         </div>
         <div class="timeline-copy">
-          <p class="timeline-kicker">6. Donem</p>
-          <h2>Yeni Cumhuriyet</h2>
-          <p>
-            Endor'dan sonra Yeni Cumhuriyet, Imparatorluk kalintilarini temizleyip galakside yeniden temsil ve denge kurmaya calisti. Coruscant yerine donusumlu baskent modeli benimsenerek merkeziyetciligin azaltilmasi hedeflendi.
+          <p class="timeline-kicker" data-i18n="history.era6.kicker">6. Dönem</p>
+          <h2 data-i18n="history.era6.title">Yeni Cumhuriyet</h2>
+          <p data-i18n="history.era6.p1">
+            Endor'dan sonra Yeni Cumhuriyet, İmparatorluk kalıntılarını temizleyip galakside yeniden temsil ve denge kurmaya çalıştı. Coruscant yerine dönüşümlü başkent modeli benimsenerek merkeziyetçiliğin azaltılması hedeflendi.
           </p>
-          <p>
-            Yine de savasin izleri silinmedi; Outer Rim'de korsanlar, Imparatorluk artigi gucler ve yeni tehditler varligini surdurdu. Bu cag, bir yandan umut ve yeniden insa donemi, diger yandan da galaksinin hala tam anlamiyla iyilesemedigi bir gecis zamaniydi.
+          <p data-i18n="history.era6.p2">
+            Yine de savaşın izleri silinmedi; Outer Rim'de korsanlar, İmparatorluk artığı güçler ve yeni tehditler varlığını sürdürdü. Bu çağ, bir yandan umut ve yeniden inşa dönemi, diğer yandan da galaksinin hâlâ tam anlamıyla iyileşemediği bir geçiş zamanıydı.
           </p>
         </div>
       </article>
